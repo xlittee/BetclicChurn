@@ -7,7 +7,7 @@ Created on Wed Aug 21 14:06:14 2019
 
 import numpy as np
 import pandas as pd
-import os
+import warnings
 from sklearn.linear_model import LogisticRegression
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.tree import DecisionTreeClassifier
@@ -21,6 +21,7 @@ from sklearn.utils import resample
 from sklearn.metrics import roc_auc_score
 from imblearn.over_sampling import SMOTE
 
+warnings.filterwarnings("ignore")
 
 def ask_parameters_to_user(Question):
     local_test=False
@@ -228,10 +229,10 @@ def train_model():
     
     print(time.time()-start_time)
     
-    return model
+    return model,scaler
      #%%       
   
-def user_interface(model):
+def user_interface(model,scaler):
     #    USER INTERFACE
     label_debut=True
     while label_debut==True:
@@ -282,5 +283,5 @@ def user_interface(model):
     print('Good Bye!')
     
 if __name__== "__main__":
-  trained_model=train_model()
-  user_interface(trained_model)
+  trained_model,scaler=train_model()
+  user_interface(trained_model,scaler)
