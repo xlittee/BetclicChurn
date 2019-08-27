@@ -49,8 +49,7 @@ def train_model():
        
     
     start_time=time.time()
-    os.chdir('N:/Python')
-    
+        
     path='betclic_datascience_test_churn.csv'
     
     Data=pd.read_csv(path,';')
