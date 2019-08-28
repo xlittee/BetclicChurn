@@ -1,9 +1,0 @@
-Python-->3
-
-Required Modules:
-sklearn
-imblearn : to install imblearn, see https://imbalanced-learn.readthedocs.io/en/stable/install.html
-warnings
-
-
-You will also need to save the 'betclic_datascience_test_churn.csv' file into the BetclicChurn folder, it is to big to be uploaded on GitHub
