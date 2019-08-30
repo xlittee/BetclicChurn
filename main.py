@@ -45,7 +45,7 @@ def ask_yes_or_no_question(Question):
 def train_model():
     
     start_time=time.time()
-    print("The training of the model has begun, it should take  less than 3 minutes to complete")
+    print("The training of the model has begun, it should take  about 3 minutes to complete")
         
     path='betclic_datascience_test_churn.csv'
     
